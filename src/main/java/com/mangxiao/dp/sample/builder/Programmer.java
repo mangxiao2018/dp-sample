@@ -1,7 +1,7 @@
 package com.mangxiao.dp.sample.builder;
 
 /**
- * @description:建设者模式
+ * @description:建设者模式,也叫创建者模式，又叫建造者模式
  * @author:mangxiao
  * @date:2020-8-11
  * 在创建建设者模式时，注意以下几个关键点(特点)：
