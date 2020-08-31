@@ -8,9 +8,30 @@ package com.mangxiao.dp.sample.singleton;
 public class SingletonL {
     private static SingletonL instance = null;
 
-    public synchronized SingletonL getInstance(){
+    private SingletonL(){}
+
+    /**
+     * 单锁
+     * @return
+     */
+    public static synchronized SingletonL getInstance(){
         if (null == instance){
              instance = new SingletonL();
+        }
+        return instance;
+    }
+
+    /**
+     * 双锁
+     * @return
+     */
+    public static synchronized SingletonL getInstancex() {
+        if (instance == null) {
+            synchronized (SingletonL.class) {
+                if (instance == null) {
+                    instance = new SingletonL();
+                }
+            }
         }
         return instance;
     }
