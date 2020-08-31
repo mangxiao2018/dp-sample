@@ -18,5 +18,11 @@ public class TestSingleton {
             s2 = SingletonL.getInstance();
             System.out.println("第"+i+"次创建懒汉式单例模式,验证创建对象是否是单例，对像为:"+s2);
         }
+
+        SingletonH s3 = SingletonH.getInstance();
+        SingletonH s4 = SingletonH.getInstance();
+        System.out.println(s3 == s4);
+        System.out.println(s3.equals(s4));
+
     }
 }
